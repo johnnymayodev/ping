@@ -46,7 +46,7 @@ fi
 
 # Copy files from temporary directory to current directory (excluding .git)
 echo "Updating files..."
-rsync -av --exclude='.git' "$TEMP_DIR"/ ./
+rsync -a --exclude='.git' "$TEMP_DIR"/ ./
 
 # Clean up temporary directory
 echo "Cleaning up..."
