@@ -62,8 +62,6 @@ if command -v bun &> /dev/null && [ -f "package.json" ]; then
 	bun install
 	echo "Building..."
 	bun run build
-	echo "Removing not needed files..."
-	rm -rf node_modules
 	echo "Starting..."
 	bun start
 fi
