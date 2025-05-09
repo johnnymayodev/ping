@@ -12,22 +12,13 @@ app.get(PATH, (c) => {
   return c.text("pong", 200);
 });
 
-app.get("/health", (c) => {
+app.get(PATH + "/health", (c) => {
   return c.json(
     {
       message: "I'm doing great! Thank you for asking!",
       uptime: process.uptime().toFixed(4),
     },
     200,
-  );
-});
-
-app.get("/", (c) => {
-  return c.json(
-    {
-      message: "Please use the /ping endpoint.",
-    },
-    418,
   );
 });
 
